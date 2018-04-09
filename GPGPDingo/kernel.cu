@@ -3,142 +3,104 @@
 #include "device_launch_parameters.h"
 
 #include <stdio.h>
+#include <cstdlib>
+#include <math.h>
+// Matrix is ROW Major in memory!
 
-cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size);
+const int matWidth = 1024;
+const int size = matWidth * matWidth;
 
-__global__ void addKernel(int *c, const int *a, const int *b)
+void matMulHost(float* result, const float* a, const float* b, int size)
 {
-    int i = threadIdx.x;
-    c[i] = a[i] + b[i];
-}
-
-int main()
-{
-	int deviceCount;
-	cudaGetDeviceCount(&deviceCount);
-
-	if (deviceCount > 0) {
-		printf("%d Cuda Device found \n\n", deviceCount);
-
-		for (int i = 0; i < deviceCount; i++) {
-			cudaDeviceProp prop;
-			cudaGetDeviceProperties(&prop, i);
-			printf("Cuda Device Number %d\n", i);
-			printf("Name of Cuda Device: %s \n", prop.name);
-			printf("Compute Capability major: %d \n", prop.major);
-			printf("Compute Capability minor: %d \n", prop.minor);			
-			printf("Maximum size of a grid (x, y, z): (%d, %d, %d) \n", prop.maxGridSize[0], prop.maxGridSize[1], prop.maxGridSize[2]);
-			printf("Maximum size of a block (x, y, z): (%d, %d, %d) \n\n", prop.maxThreadsDim[0], prop.maxThreadsDim[1], prop.maxThreadsDim[2]);
-
+	for (int row = 0; row < size; row++)
+	{
+		for (int column = 0; column < size; column++)
+		{
+			result[column + row * size] = 0;
+			for (int index = 0; index < size; index++)
+			{
+				result[column + row * size] += a[row * size + index] * b[column + size * index];
+			}
 		}
 
 
 	}
-
-    const int arraySize = 5;
-    const int a[arraySize] = { 1, 2, 3, 4, 5 };
-    const int b[arraySize] = { 10, 20, 30, 40, 50 };
-    int c[arraySize] = { 0 };
-
-    // Add vectors in parallel.
-    cudaError_t cudaStatus = addWithCuda(c, a, b, arraySize);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "addWithCuda failed!");
-        return 1;
-    }
-
-	printf("Hello CUDA!\n");
-
-    printf("{1,2,3,4,5} + {10,20,30,40,50} = {%d,%d,%d,%d,%d}\n",
-        c[0], c[1], c[2], c[3], c[4]);
-
-    // cudaDeviceReset must be called before exiting in order for profiling and
-    // tracing tools such as Nsight and Visual Profiler to show complete traces.
-    cudaStatus = cudaDeviceReset();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaDeviceReset failed!");
-        return 1;
-    }
-
-    return 0;
 }
 
-// Helper function for using CUDA to add vectors in parallel.
-cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
+__global__ void matMulCuda(float* result, const float* a, const float* b, int size)
 {
-    int *dev_a = 0;
-    int *dev_b = 0;
-    int *dev_c = 0;
-    cudaError_t cudaStatus;
+	int row = blockIdx.x;
+	int column = blockIdx.y;
 
-    // Choose which GPU to run on, change this on a multi-GPU system.
-    cudaStatus = cudaSetDevice(0);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaSetDevice failed!  Do you have a CUDA-capable GPU installed?");
-        goto Error;
-    }
-
-    // Allocate GPU buffers for three vectors (two input, one output)    .
-    cudaStatus = cudaMalloc((void**)&dev_c, size * sizeof(int));
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMalloc failed!");
-        goto Error;
-    }
-
-    cudaStatus = cudaMalloc((void**)&dev_a, size * sizeof(int));
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMalloc failed!");
-        goto Error;
-    }
-
-    cudaStatus = cudaMalloc((void**)&dev_b, size * sizeof(int));
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMalloc failed!");
-        goto Error;
-    }
-
-    // Copy input vectors from host memory to GPU buffers.
-    cudaStatus = cudaMemcpy(dev_a, a, size * sizeof(int), cudaMemcpyHostToDevice);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMemcpy failed!");
-        goto Error;
-    }
-
-    cudaStatus = cudaMemcpy(dev_b, b, size * sizeof(int), cudaMemcpyHostToDevice);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMemcpy failed!");
-        goto Error;
-    }
-
-    // Launch a kernel on the GPU with one thread for each element.
-    addKernel<<<1, size>>>(dev_c, dev_a, dev_b);
-
-    // Check for any errors launching the kernel
-    cudaStatus = cudaGetLastError();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "addKernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
-        goto Error;
-    }
-    
-    // cudaDeviceSynchronize waits for the kernel to finish, and returns
-    // any errors encountered during the launch.
-    cudaStatus = cudaDeviceSynchronize();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaDeviceSynchronize returned error code %d after launching addKernel!\n", cudaStatus);
-        goto Error;
-    }
-
-    // Copy output vector from GPU buffer to host memory.
-    cudaStatus = cudaMemcpy(c, dev_c, size * sizeof(int), cudaMemcpyDeviceToHost);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMemcpy failed!");
-        goto Error;
-    }
-
-Error:
-    cudaFree(dev_c);
-    cudaFree(dev_a);
-    cudaFree(dev_b);
-    
-    return cudaStatus;
+	result[column + row * size] = 0;
+	for (int index = 0; index < size; index++)
+	{
+		result[column + row * size] += a[row * size + index] * b[column + size * index];
+	}
 }
+
+float getRandom()
+{
+	return ((float)rand()) / ((float)RAND_MAX);
+}
+
+#define CUDA_ERROR_CHECK(Value) if (Value != cudaSuccess) {printf("cudafailed!"); return 1;};
+
+int main()
+{
+	srand((unsigned)139213);
+	// Init Random Seed
+	/*std::default_random_engine randomEngine;
+	std::uniform_real_distribution<float> distribution(0.f, 10.f);
+	auto dice = std::bind(distribution, randomEngine);*/
+	float *aCpu = (float*)malloc(sizeof(float) * size);
+	for (int i = 0; i < size; ++i)
+		*(aCpu + i) = getRandom();
+
+	float *bCpu = (float*)malloc(sizeof(float) * size);
+	for (int i = 0; i < size; ++i)
+		*(bCpu + i) = getRandom();
+
+	float *cpuResult = (float*)malloc(sizeof(float) * size);
+	float *hostCudaResult = (float*)malloc(sizeof(float) * size);
+	matMulHost(cpuResult, aCpu, bCpu, matWidth);
+
+
+	float *cudaA, *cudaB, *cudaResult;
+	CUDA_ERROR_CHECK(cudaMalloc(&cudaA, sizeof(float) * size));
+	CUDA_ERROR_CHECK(cudaMalloc(&cudaB, sizeof(float) * size));
+	CUDA_ERROR_CHECK(cudaMalloc(&cudaResult, sizeof(float) * size));
+
+	CUDA_ERROR_CHECK(cudaMemcpy(cudaA, aCpu, size * sizeof(float), cudaMemcpyHostToDevice));
+	CUDA_ERROR_CHECK(cudaMemcpy(cudaB, bCpu, size * sizeof(float), cudaMemcpyHostToDevice));
+
+	dim3 blockDim;
+	blockDim.x = 1024;
+	blockDim.y = 1024;
+
+	matMulCuda << <blockDim, 1 >> >(cudaResult, cudaA, cudaB, matWidth);
+	cudaDeviceSynchronize();
+
+	cudaMemcpy(hostCudaResult, cudaResult, size * sizeof(float), cudaMemcpyDeviceToHost);
+
+	cudaFree(cudaA);
+	cudaFree(cudaB);
+	cudaFree(cudaResult);
+
+	for (int i = 0; i < size; ++i)
+	{
+		if (cpuResult[i] != hostCudaResult[i])
+			printf("SHITY");
+	}
+
+	free(aCpu);
+	free(bCpu);
+	free(cpuResult);
+	free(hostCudaResult);
+	return 0;
+}
+
+
+
+
+
