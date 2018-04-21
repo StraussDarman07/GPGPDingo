@@ -110,8 +110,8 @@ matrixMulCUDA(float *C, float *A, float *B, int wA, int wB)
 
 __global__ void matMulCuda(float* result, const float* a, const float* b, int matWidth)
 {
-	int row = blockIdx.x;
-	int column = blockIdx.y;
+	int row = blockIdx.x * blockDim.x + threadIdx.x;
+	int column = blockIdx.y * blockDim.y + threadIdx.y;
 
 	int resultIndex = column + row * matWidth;
 	if (resultIndex < matWidth*matWidth)
@@ -148,6 +148,7 @@ int main()
 
 	float *cpuResult = (float*)malloc(sizeof(float) * size);
 	float *hostCudaResult = (float*)malloc(sizeof(float) * size);
+	float absError = 0.f;
 
 	// Create timer
 	StopWatchInterface *t;
@@ -165,21 +166,24 @@ int main()
 
 	// Resource alloc
 	dim3 gridDim;
-	gridDim.x = matWidth;
-	gridDim.y = matWidth;
+	int threadSize = 32;
+	dim3 threads(threadSize, threadSize);
+	gridDim.x = matWidth/ threadSize;
+	gridDim.y = matWidth/ threadSize;
+	
 	float *cudaA, *cudaB, *cudaResult;
 	CUDA_ERROR_CHECK(cudaMalloc(&cudaA, sizeof(float) * size));
 	CUDA_ERROR_CHECK(cudaMalloc(&cudaB, sizeof(float) * size));
 	CUDA_ERROR_CHECK(cudaMalloc(&cudaResult, sizeof(float) * size));
 
 	cudaMemset(cudaResult, 0, sizeof(float) * size);
-
+	
 	// Warmup
 	sdkResetTimer(&t);
 	sdkStartTimer(&t);
 	CUDA_ERROR_CHECK(cudaMemcpy(cudaA, aCpu, 2 * sizeof(float), cudaMemcpyHostToDevice));
 	CUDA_ERROR_CHECK(cudaMemcpy(cudaB, bCpu, 2 * sizeof(float), cudaMemcpyHostToDevice));
-	matMulCuda << <gridDim, 1 >> > (cudaResult, cudaA, cudaB, 2);
+	matMulCuda << <gridDim, threads >> > (cudaResult, cudaA, cudaB, 2);
 	cudaDeviceSynchronize();
 	cudaMemcpy(hostCudaResult, cudaResult, 2 * sizeof(float), cudaMemcpyDeviceToHost);
 	sdkStopTimer(&t);
@@ -190,13 +194,19 @@ int main()
 	sdkStartTimer(&t);
 	CUDA_ERROR_CHECK(cudaMemcpy(cudaA, aCpu, size * sizeof(float), cudaMemcpyHostToDevice));
 	CUDA_ERROR_CHECK(cudaMemcpy(cudaB, bCpu, size * sizeof(float), cudaMemcpyHostToDevice));
-	matMulCuda << <gridDim, 1 >> > (cudaResult, cudaA, cudaB, matWidth);
+	matMulCuda << <gridDim, threads >> > (cudaResult, cudaA, cudaB, matWidth);
 	cudaDeviceSynchronize();
 	cudaMemcpy(hostCudaResult, cudaResult, size * sizeof(float), cudaMemcpyDeviceToHost);
 	sdkStopTimer(&t);
+
 	printf("Zeitdauer (GPU): %f\n", sdkGetTimerValue(&t));
 
-	dim3 threads(32, 32);
+	for (int i = 0; i < size; ++i)
+	{
+		absError += fabs(cpuResult[i] - hostCudaResult[i]);
+	}
+	printf("Absolute Error: %f\n", absError);
+	
 	dim3 grid(matWidth / threads.x, matWidth / threads.y);
 
 	// Cuda Impl Measurement
@@ -210,17 +220,17 @@ int main()
 	sdkStopTimer(&t);
 	printf("Zeitdauer (GPU(CudaImpl)): %f\n", sdkGetTimerValue(&t));
 
-	float absError = 0.f;
+	absError = 0.f;
 	for (int i = 0; i < size; ++i)
 	{
 		absError += fabs(cpuResult[i] - hostCudaResult[i]);
 	}
-
+	printf("Absolute Error: %f\n", absError);
 	cudaFree(cudaA);
 	cudaFree(cudaB);
 	cudaFree(cudaResult);
 	
-	printf("Absolute Error: %f\n", absError);
+	
 	free(aCpu);
 	free(bCpu);
 	free(cpuResult);
