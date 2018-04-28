@@ -2,7 +2,7 @@
 #include "device_launch_parameters.h"
 
 
-__global__ void addKernel(unsigned char *data, int width, int height, int components)
+__global__ void toOneChannel(unsigned char *data, int width, int height, int components)
 {
 	int column = blockIdx.x * blockDim.x + threadIdx.x;
 	int row = blockIdx.y * blockDim.y + threadIdx.y;

@@ -1,7 +1,6 @@
 // OpenCVReadVideo.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
 //
 
-#include <iostream>
 #include "stdafx.h"
 
 #include "opencv2/opencv.hpp"
@@ -10,7 +9,7 @@
 using namespace cv;
 using namespace std;
 
-extern void addKernel(unsigned char *data, int width, int height, int components);
+extern void toOneChannel(unsigned char *data, int width, int height, int components);
 
 void singleChannelCuda(Mat& output)
 {
@@ -22,7 +21,7 @@ void singleChannelCuda(Mat& output)
 	cudaMemcpy(deviceMem, output.data, size_in_bytes, cudaMemcpyHostToDevice);
 
 	void *args[] = { &deviceMem , &output.cols, &output.rows, &elemSize };
-	cudaLaunchKernel<void>(&addKernel, dim3(output.cols / 16 + 1, output.rows / 16 + 1), dim3(16, 16), args);
+	cudaLaunchKernel<void>(&toOneChannel, dim3(output.cols / 16 + 1, output.rows / 16 + 1), dim3(16, 16), args);
 
 	cudaDeviceSynchronize();
 	cudaMemcpy(output.data, deviceMem, size_in_bytes, cudaMemcpyDeviceToHost);
