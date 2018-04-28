@@ -33,7 +33,7 @@ void singleChannelCuda(Mat& output)
 int main(int, char**)
 {
 	//	VideoCapture cap("Z:/Videos/robotica_1080.mp4"); // open the default camera
-	VideoCapture cap("H:\\Benutzer\\Dokumente\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
+	VideoCapture cap("..\\Videos\\robotica_1080.mp4");
 	//	VideoCapture cap("C:/Users/fischer/Downloads/Bennu4k169Letterbox_h264.avi"); // open the default camera
 	//	VideoCapture cap("D:/Users/fischer/Videos/fireworks.mp4");
 	//	VideoCapture cap("D:/Users/fischer/Videos/Bennu4k169Letterbox_h264.mp4");
