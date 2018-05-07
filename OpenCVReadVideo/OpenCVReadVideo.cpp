@@ -55,8 +55,7 @@ void sobelCuda(Mat& outputFrame, void* input)
     cudaMalloc(&output, size_in_bytes);
 
     void *args[] = { &output, &input , &outputFrame.cols, &outputFrame.rows };
-    cudaLaunchKernel<void>(&sobel, dim3(outputFrame.cols / 16 + 1, outputFrame.rows / 16 + 1), dim3(16, 16), args);
-
+    cudaError_t error = cudaLaunchKernel<void>(&sobel, dim3(outputFrame.cols / 16 + 1, outputFrame.rows / 16 + 1), dim3(16, 16), args);
     cudaDeviceSynchronize();
     cudaMemcpy(outputFrame.data, output, size_in_bytes, cudaMemcpyDeviceToHost);
 
