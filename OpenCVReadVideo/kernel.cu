@@ -130,7 +130,7 @@ __global__ void sobel(unsigned char *output, unsigned char *input, int width, in
         int indexX = threadIdx.x + 1 + offsetX[i];
         int indexY = threadIdx.y + 1 + offsetY[i];
 
-        unsigned char pixel = pixels[indexX][indexY];
+        unsigned char pixel = pixels[indexY][indexX];
         pointX += pixel * weightsX[i];
         pointY += pixel * weightsY[i];
     }
