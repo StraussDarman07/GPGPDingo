@@ -12,6 +12,7 @@ using namespace std;
 extern void toOneChannel(unsigned char *data, int width, int height, int components);
 extern void toGrayScale(unsigned char *output, unsigned char *input, int width, int height, int components);
 extern void sobel(unsigned char *output, unsigned char *input, int width, int height);
+extern void sobelTex(unsigned char *output, cudaTextureObject_t *input, int width, int height);
 
 void singleChannelCuda(Mat& output)
 {
@@ -62,6 +63,49 @@ void sobelCuda(Mat& outputFrame, void* input)
     cudaFree(output);
 }
 
+void sobelCudaTex(Mat& outputFrame, void* input)
+{
+	size_t size_in_bytes = outputFrame.cols * outputFrame.rows;
+
+
+	//we have already a greyscaled picture and I'm not sure about the channels anymore
+	cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc(8, 8, 8, 0, cudaChannelFormatKindUnsigned);
+	cudaArray* cuArray;
+	cudaMallocArray(&cuArray, &channelDesc, outputFrame.cols, outputFrame.rows);
+	cudaMemcpyToArray(cuArray, 0, 0, &input, size_in_bytes, cudaMemcpyHostToDevice);
+
+	struct cudaResourceDesc resDesc;
+	memset(&resDesc, 0, sizeof(resDesc));
+	resDesc.resType = cudaResourceTypeArray;
+	resDesc.res.array.array = cuArray;
+
+	struct cudaTextureDesc texDesc;
+	memset(&texDesc, 0, sizeof(texDesc));
+	texDesc.addressMode[0] = cudaAddressModeWrap;
+	texDesc.addressMode[1] = cudaAddressModeWrap;
+	texDesc.filterMode = cudaFilterModeLinear;
+	texDesc.readMode = cudaReadModeElementType;
+	texDesc.normalizedCoords = 1;
+
+	cudaTextureObject_t texObj = 0;
+	cudaCreateTextureObject(&texObj, &resDesc, &texDesc, NULL);
+
+	void* output;
+	cudaMalloc(&output, size_in_bytes);
+
+	void *args[] = { &output, &texObj , &outputFrame.cols, &outputFrame.rows };
+	cudaError_t error = cudaLaunchKernel<void>(&sobelTex, dim3(outputFrame.cols / 16 + 1, outputFrame.rows / 16 + 1), dim3(16, 16), args);
+
+	cudaDeviceSynchronize();
+
+	cudaMemcpy(outputFrame.data, output, size_in_bytes, cudaMemcpyDeviceToHost);
+
+	cudaDestroyTextureObject(texObj);
+
+	cudaFreeArray(cuArray);
+	cudaFree(output);
+}
+
 int main(int, char**)
 {
     //	VideoCapture cap("Z:/Videos/robotica_1080.mp4"); // open the default camera
@@ -99,7 +143,7 @@ int main(int, char**)
 
 
         Mat output(frame.rows, frame.cols, CV_8UC1);
-        sobelCuda(output, greyScaleBuffer);
+        sobelCudaTex(output, greyScaleBuffer);
         imshow("edges", output);
         if (waitKey(1) >= 0) break;
     }

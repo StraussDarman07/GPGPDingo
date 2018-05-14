@@ -141,3 +141,18 @@ __global__ void sobel(unsigned char *output, unsigned char *input, int width, in
     unsigned char * outputData = output + index;
     outputData[0] = sqrtf(pointX * pointX + pointY * pointY);
 }
+
+
+__global__ void sobelTex(unsigned char *output, cudaTextureObject_t *input, int width, int height)
+{
+    int x = blockIdx.x * blockDim.x + threadIdx.x;
+    int y = blockIdx.y * blockDim.y + threadIdx.y;
+
+    if (y >= height || x >= width)
+        return;
+
+	unsigned int result = tex2D<unsigned int>(*input,x,y);
+		//just that it is white
+	unsigned char  test = (unsigned char) (int) result;
+    output[y * width + x] = test;
+}
