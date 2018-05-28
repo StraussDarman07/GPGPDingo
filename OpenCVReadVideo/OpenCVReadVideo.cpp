@@ -73,7 +73,7 @@ void sobelCudaTex(Mat& outputFrame, void* input)
 	cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc(8, 0, 0, 0, cudaChannelFormatKindUnsigned);
 	cudaArray* cuArray;
 	cudaMallocArray(&cuArray, &channelDesc, outputFrame.cols, outputFrame.rows);
-	cudaMemcpyToArray(cuArray, 0, 0, input, size_in_bytes, cudaMemcpyHostToDevice);
+	cudaMemcpyToArray(cuArray, 0, 0, input, size_in_bytes, cudaMemcpyDeviceToDevice);
 
 	struct cudaResourceDesc resDesc;
 	memset(&resDesc, 0, sizeof(resDesc));
@@ -155,7 +155,7 @@ int main(int, char**)
 		// Create timer
 
 		sdkStartTimer(&t);
-		sobelCuda(output, greyScaleBuffer);
+		sobelCudaTex(output, greyScaleBuffer);
 		sdkStopTimer(&t);
 
 		time += sdkGetTimerValue(&t);
