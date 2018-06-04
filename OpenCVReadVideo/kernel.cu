@@ -188,3 +188,61 @@ __global__ void sobelTex(unsigned char *output, cudaTextureObject_t input, int w
 
 	output[y * width + x] = sqrtf(pointX * pointX + pointY * pointY);
 }
+
+__global__ void histogramGlobal(unsigned int* hist, unsigned char* input, int size, int stride)
+{
+	int index = blockIdx.x * blockDim.x * stride + threadIdx.x;
+
+	if (index > size - 1)
+		return;
+
+	int i = 0;
+	while (i < stride && index < size)
+	{
+		int pixel = input[index];
+		atomicAdd(&(hist[pixel]), 1);
+		index += stride;
+		i++;
+	}
+}
+
+__global__ void histogramPrivate(unsigned int* hist, unsigned char* input, int size, int stride)
+{
+	int index = blockIdx.x * blockDim.x * stride + threadIdx.x;
+
+	if (index > size - 1)
+		return;
+
+	__shared__ unsigned int histo_private[256];
+
+	histo_private[threadIdx.x * 8 + 0] = 0;
+	histo_private[threadIdx.x * 8 + 1] = 0;
+	histo_private[threadIdx.x * 8 + 2] = 0;
+	histo_private[threadIdx.x * 8 + 3] = 0;
+	histo_private[threadIdx.x * 8 + 4] = 0;
+	histo_private[threadIdx.x * 8 + 5] = 0;
+	histo_private[threadIdx.x * 8 + 6] = 0;
+	histo_private[threadIdx.x * 8 + 7] = 0;
+
+	__syncthreads();
+
+	int i = 0;
+	while (i < stride && index < size)
+	{
+		int pixel = input[index];
+		atomicAdd(&(histo_private[pixel]), 1);
+		index += stride;
+		i++;
+	}
+
+	__syncthreads();
+
+	atomicAdd(&(hist[threadIdx.x * 8 + 0]), histo_private[threadIdx.x * 8 + 0]);
+	atomicAdd(&(hist[threadIdx.x * 8 + 1]), histo_private[threadIdx.x * 8 + 1]);
+	atomicAdd(&(hist[threadIdx.x * 8 + 2]), histo_private[threadIdx.x * 8 + 2]);
+	atomicAdd(&(hist[threadIdx.x * 8 + 3]), histo_private[threadIdx.x * 8 + 3]);
+	atomicAdd(&(hist[threadIdx.x * 8 + 4]), histo_private[threadIdx.x * 8 + 4]);
+	atomicAdd(&(hist[threadIdx.x * 8 + 5]), histo_private[threadIdx.x * 8 + 5]);
+	atomicAdd(&(hist[threadIdx.x * 8 + 6]), histo_private[threadIdx.x * 8 + 6]);
+	atomicAdd(&(hist[threadIdx.x * 8 + 7]), histo_private[threadIdx.x * 8 + 7]);
+}

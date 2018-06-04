@@ -14,6 +14,8 @@ extern void toOneChannel(unsigned char *data, int width, int height, int compone
 extern void toGrayScale(unsigned char *output, unsigned char *input, int width, int height, int components);
 extern void sobel(unsigned char *output, unsigned char *input, int width, int height);
 extern void sobelTex(unsigned char *output, cudaTextureObject_t input, int width, int height);
+extern void histogramGlobal(unsigned int* hist, unsigned char* input, int size, int stride);
+extern void histogramPrivate(unsigned int* hist, unsigned char* input, int size, int stride);
 
 void singleChannelCuda(Mat& output)
 {
@@ -107,6 +109,24 @@ void sobelCudaTex(Mat& outputFrame, void* input)
 	cudaFree(output);
 }
 
+void histogramCuda(unsigned int* hist, void* input, int width, int height, int buckets, bool global)
+{
+	void* output;
+	int size_in_bytes = buckets * sizeof(unsigned int);
+	cudaMalloc(&output, size_in_bytes);
+	cudaMemset(output, 0, size_in_bytes);
+
+	int size = width * height;
+	int stride = 64;
+	void *args[] = { &output, &input , &size, &stride };
+	cudaError_t error = cudaLaunchKernel<void>(global ? &histogramGlobal : &histogramPrivate, dim3(size / (32 * stride) + 1), dim3(32), args);
+
+	cudaDeviceSynchronize();
+	cudaMemcpy(hist, output, size_in_bytes, cudaMemcpyDeviceToHost);
+
+	cudaFree(output);
+}
+
 int main(int, char**)
 {
 	//	VideoCapture cap("Z:/Videos/robotica_1080.mp4"); // open the default camera
@@ -129,7 +149,8 @@ int main(int, char**)
 		exit(-1);
 	}
 
-	float time = 0;
+	float global_time = 0;
+	float private_time = 0;
 	int frameCount = 0;
 	namedWindow("edges", 1);
 	for (;;)
@@ -151,22 +172,30 @@ int main(int, char**)
 		greyScaleCuda(frame, greyScaleBuffer);
 
 
-		Mat output(frame.rows, frame.cols, CV_8UC1);
+		unsigned int histG[256];
+		unsigned int histP[256];
+		frameCount++;
 		// Create timer
-
 		sdkStartTimer(&t);
-		sobelCudaTex(output, greyScaleBuffer);
+		histogramCuda(histG, greyScaleBuffer, frame.cols, frame.rows, 256, true);
 		sdkStopTimer(&t);
 
-		time += sdkGetTimerValue(&t);
-		frameCount++;
+		global_time += sdkGetTimerValue(&t);
 		sdkResetTimer(&t);
-		imshow("edges", output);
+
+		sdkStartTimer(&t);
+		histogramCuda(histP, greyScaleBuffer, frame.cols, frame.rows, 256, false);
+		sdkStopTimer(&t);
+
+		private_time += sdkGetTimerValue(&t);
+		sdkResetTimer(&t);
+		//imshow("edges", output);
 		if (waitKey(1) >= 0) break;
 	}
 
 	cudaFree(greyScaleBuffer);
-	printf("Average Time per Frame: %fms", time / frameCount);
+	printf("Average Time per Frame(global): %fms\n", global_time / frameCount);
+	printf("Average Time per Frame(private): %fms\n", private_time / frameCount);
 	getchar();
 	// the camera will be deinitialized automatically in VideoCapture destructor
 	return 0;
