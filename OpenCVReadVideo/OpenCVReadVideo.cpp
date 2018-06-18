@@ -1,6 +1,3 @@
-// OpenCVReadVideo.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
-//
-
 #include "stdafx.h"
 
 #include "opencv2/opencv.hpp"
@@ -13,9 +10,6 @@ using namespace std;
 extern void toOneChannel(unsigned char *data, int width, int height, int components);
 extern void toGrayScale(unsigned char *output, unsigned char *input, int width, int height, int components);
 extern void sobel(unsigned char *output, unsigned char *input, int width, int height);
-extern void sobelTex(unsigned char *output, cudaTextureObject_t input, int width, int height);
-extern void histogramGlobal(unsigned int* hist, unsigned char* input, int size, int stride);
-extern void histogramPrivate(unsigned int* hist, unsigned char* input, int size, int stride);
 
 void singleChannelCuda(Mat& output)
 {
@@ -59,152 +53,131 @@ void sobelCuda(Mat& outputFrame, void* input)
 	cudaMalloc(&output, size_in_bytes);
 
 	void *args[] = { &output, &input , &outputFrame.cols, &outputFrame.rows };
-	cudaError_t error = cudaLaunchKernel<void>(&sobel, dim3(outputFrame.cols / 16 + 1, outputFrame.rows / 16 + 1), dim3(16, 16), args);
+	cudaLaunchKernel<void>(&sobel, dim3(outputFrame.cols / 16 + 1, outputFrame.rows / 16 + 1), dim3(16, 16), args);
+
 	cudaDeviceSynchronize();
 	cudaMemcpy(outputFrame.data, output, size_in_bytes, cudaMemcpyDeviceToHost);
 
 	cudaFree(output);
 }
 
-void sobelCudaTex(Mat& outputFrame, void* input)
+struct Stream
 {
-	size_t size_in_bytes = outputFrame.cols * outputFrame.rows;
+	cudaStream_t cudaStream;
+	Mat input_frame;
+	Mat output_frame;
+	void* d_inout_buffer;
+	void* d_buffer;
+};
 
-
-	//we have already a greyscaled picture and I'm not sure about the channels anymore
-	cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc(8, 0, 0, 0, cudaChannelFormatKindUnsigned);
-	cudaArray* cuArray;
-	cudaMallocArray(&cuArray, &channelDesc, outputFrame.cols, outputFrame.rows);
-	cudaMemcpyToArray(cuArray, 0, 0, input, size_in_bytes, cudaMemcpyDeviceToDevice);
-
-	struct cudaResourceDesc resDesc;
-	memset(&resDesc, 0, sizeof(resDesc));
-	resDesc.resType = cudaResourceTypeArray;
-	resDesc.res.array.array = cuArray;
-
-	struct cudaTextureDesc texDesc;
-	memset(&texDesc, 0, sizeof(texDesc));
-	texDesc.addressMode[0] = cudaAddressModeWrap;
-	texDesc.addressMode[1] = cudaAddressModeWrap;
-	texDesc.filterMode = cudaFilterModePoint;// cudaFilterModeLinear;
-	texDesc.readMode = cudaReadModeElementType;
-	texDesc.normalizedCoords = 1;
-
-	cudaTextureObject_t texObj = 0;
-	cudaError_t err = cudaCreateTextureObject(&texObj, &resDesc, &texDesc, NULL);
-
-	void* output;
-	cudaMalloc(&output, size_in_bytes);
-
-	void *args[] = { &output, &texObj , &outputFrame.cols, &outputFrame.rows };
-	cudaError_t error = cudaLaunchKernel<void>(&sobelTex, dim3(outputFrame.cols / 16 + 1, outputFrame.rows / 16 + 1), dim3(16, 16), args);
-
-	cudaDeviceSynchronize();
-
-	cudaMemcpy(outputFrame.data, output, size_in_bytes, cudaMemcpyDeviceToHost);
-
-	cudaDestroyTextureObject(texObj);
-
-	cudaFreeArray(cuArray);
-	cudaFree(output);
-}
-
-void histogramCuda(unsigned int* hist, void* input, int width, int height, int buckets, bool global)
+void grayScaleSobelStream(Stream* stream)
 {
-	void* output;
-	int size_in_bytes = buckets * sizeof(unsigned int);
-	cudaMalloc(&output, size_in_bytes);
-	cudaMemset(output, 0, size_in_bytes);
+	// Copy Input frame to GPU
+	size_t size_in_bytes = stream->input_frame.cols * stream->input_frame.rows;
+	size_t elemSize = stream->input_frame.elemSize();
+	cudaMemcpyAsync(stream->d_inout_buffer, stream->input_frame.data, size_in_bytes * elemSize, cudaMemcpyHostToDevice, stream->cudaStream);
 
-	int size = width * height;
-	int stride = 64;
-	void *args[] = { &output, &input , &size, &stride };
-	cudaError_t error = cudaLaunchKernel<void>(global ? &histogramGlobal : &histogramPrivate, dim3(size / (32 * stride) + 1), dim3(32), args);
+	// Greyscale
+	void *argsGreyScale[] = { &stream->d_buffer, &stream->d_inout_buffer , &stream->input_frame.cols, &stream->input_frame.rows, &elemSize };
+	cudaLaunchKernel<void>(&toGrayScale, dim3(stream->input_frame.cols / 16 + 1, stream->input_frame.rows / 16 + 1), dim3(16, 16), argsGreyScale, 0, stream->cudaStream);
 
-	cudaDeviceSynchronize();
-	cudaMemcpy(hist, output, size_in_bytes, cudaMemcpyDeviceToHost);
+	// Sobel
+	void *argsSobel[] = { &stream->d_inout_buffer, &stream->d_buffer , &stream->input_frame.cols, &stream->input_frame.rows };
+	cudaLaunchKernel<void>(&sobel, dim3(stream->input_frame.cols / 16 + 1, stream->input_frame.rows / 16 + 1), dim3(16, 16), argsSobel, 0, stream->cudaStream);
 
-	cudaFree(output);
+	// Copy output frame to cpu
+	stream->output_frame = Mat(stream->input_frame.rows, stream->input_frame.cols, CV_8UC1);
+	cudaMemcpyAsync(stream->output_frame.data, stream->d_inout_buffer, size_in_bytes, cudaMemcpyDeviceToHost, stream->cudaStream);
 }
 
 int main(int, char**)
 {
-	//	VideoCapture cap("Z:/Videos/robotica_1080.mp4"); // open the default camera
 	VideoCapture cap("..\\Videos\\robotica_1080.mp4");
-	//	VideoCapture cap("C:/Users/fischer/Downloads/Bennu4k169Letterbox_h264.avi"); // open the default camera
-	//	VideoCapture cap("D:/Users/fischer/Videos/fireworks.mp4");
-	//	VideoCapture cap("D:/Users/fischer/Videos/Bennu4k169Letterbox_h264.mp4");
-	//	VideoCapture cap("D:/Users/fischer/Videos/Bennu4k169Letterbox_h264.avi");
 
 	if (!cap.isOpened())  // check if we succeeded
 		return -1;
 
-	bool firstFrame = true;
-	void* greyScaleBuffer = nullptr;
-	size_t frameBufferSize = 0;
-
+	int frameCount = 0;
+	float global_time = 0;
 	StopWatchInterface *t;
 	if (!sdkCreateTimer(&t)) {
 		printf("timercreate failed\n");
 		exit(-1);
 	}
 
-	float global_time = 0;
-	float private_time = 0;
-	int frameCount = 0;
 	namedWindow("edges", 1);
+
+	Stream stream1, stream2;
+	cudaStreamCreate(&stream1.cudaStream);
+	cudaStreamCreate(&stream2.cudaStream);
+
+	cap >> stream1.input_frame; // get a new frame from camera
+	cap >> stream2.input_frame;
+
+	size_t frameBufferSize = stream1.input_frame.cols * stream1.input_frame.rows;
+	cudaMalloc(&stream1.d_inout_buffer, frameBufferSize * stream1.input_frame.elemSize());
+	cudaMalloc(&stream2.d_inout_buffer, frameBufferSize * stream2.input_frame.elemSize());
+	cudaMalloc(&stream1.d_buffer, frameBufferSize);
+	cudaMalloc(&stream2.d_buffer, frameBufferSize);
+
+
+	grayScaleSobelStream(&stream1);
+	auto currentStream = &stream2;
+
+	sdkStartTimer(&t);
 	for (;;)
 	{
-		Mat frame;
-		cap >> frame; // get a new frame from camera
-
-		if (frame.dims == 0) { // we're done
+		if (currentStream->input_frame.dims == 0)
 			break;
-		}
+		frameCount++;
+#if 1
+		grayScaleSobelStream(currentStream);
+		if (waitKey(1) >= 0) break;
 
-		if (firstFrame)
-		{
-			frameBufferSize = frame.cols * frame.rows;
-			cudaMalloc(&greyScaleBuffer, frameBufferSize);
-			firstFrame = false;
-		}
+		if (currentStream == &stream2)
+			currentStream = &stream1;
+		else
+			currentStream = &stream2;
+
+		// Wait for currentStream
+		cudaStreamSynchronize(currentStream->cudaStream);
+		imshow("edges", currentStream->output_frame);
+		cap >> currentStream->input_frame;
+
+#else
+		frameCount++;
+		sdkStartTimer(&t);
 
 		greyScaleCuda(frame, greyScaleBuffer);
 
-
-		unsigned int histG[256];
-		unsigned int histP[256];
-		frameCount++;
-		// Create timer
-		sdkStartTimer(&t);
-		histogramCuda(histG, greyScaleBuffer, frame.cols, frame.rows, 256, true);
+		Mat output(frame.rows, frame.cols, CV_8UC1);
+		sobelCuda(output, greyScaleBuffer);
+		imshow("edges", output);
 		sdkStopTimer(&t);
-
 		global_time += sdkGetTimerValue(&t);
 		sdkResetTimer(&t);
-
-		sdkStartTimer(&t);
-		histogramCuda(histP, greyScaleBuffer, frame.cols, frame.rows, 256, false);
-		sdkStopTimer(&t);
-
-		private_time += sdkGetTimerValue(&t);
-		sdkResetTimer(&t);
-		//imshow("edges", output);
 		if (waitKey(1) >= 0) break;
+#endif
 	}
 
-	cudaFree(greyScaleBuffer);
+	
+	if (currentStream == &stream2)
+		currentStream = &stream1;
+	else
+		currentStream = &stream2;
+
+	cudaStreamSynchronize(currentStream->cudaStream);
+	imshow("edges", currentStream->output_frame);
+	
+	sdkStopTimer(&t);
+	global_time += sdkGetTimerValue(&t);
+
+
+	cudaFree(stream1.d_inout_buffer);
+	cudaFree(stream2.d_inout_buffer);
+	cudaFree(stream1.d_buffer);
+	cudaFree(stream2.d_buffer);
 	printf("Average Time per Frame(global): %fms\n", global_time / frameCount);
-	printf("Average Time per Frame(private): %fms\n", private_time / frameCount);
 	getchar();
-	// the camera will be deinitialized automatically in VideoCapture destructor
 	return 0;
-
-
-
-	//cvtColor(frame, edges, COLOR_BGR2GRAY);
-	//GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);
-	//		Sobel(frame, edges, frame.depth(), 2, 2);
-	//		Canny(edges, edges, 0, 30, 3);
-	//		imshow("edges", edges);
-}
+	}
