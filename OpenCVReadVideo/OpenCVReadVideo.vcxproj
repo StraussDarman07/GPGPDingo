@@ -164,7 +164,8 @@
       <Command>xcopy $(SolutionDir)OpenCV\vc14\bin $(TargetDir) /s /i /q /y</Command>
     </PostBuildEvent>
     <CudaCompile>
-      <Include>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v9.1\common\inc</Include>
+      <Include>
+      </Include>
     </CudaCompile>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>

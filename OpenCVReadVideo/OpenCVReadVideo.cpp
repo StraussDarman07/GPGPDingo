@@ -90,20 +90,12 @@ void grayScaleSobelStream(Stream* stream)
 	cudaMemcpyAsync(stream->output_frame.data, stream->d_inout_buffer, size_in_bytes, cudaMemcpyDeviceToHost, stream->cudaStream);
 }
 
-int main(int, char**)
+int do_streams()
 {
 	VideoCapture cap("..\\Videos\\robotica_1080.mp4");
 
 	if (!cap.isOpened())  // check if we succeeded
 		return -1;
-
-	int frameCount = 0;
-	float global_time = 0;
-	StopWatchInterface *t;
-	if (!sdkCreateTimer(&t)) {
-		printf("timercreate failed\n");
-		exit(-1);
-	}
 
 	namedWindow("edges", 1);
 
@@ -123,13 +115,10 @@ int main(int, char**)
 
 	grayScaleSobelStream(&stream1);
 	auto currentStream = &stream2;
-
-	sdkStartTimer(&t);
 	for (;;)
 	{
 		if (currentStream->input_frame.dims == 0)
 			break;
-		frameCount++;
 #if 1
 		grayScaleSobelStream(currentStream);
 		if (waitKey(1) >= 0) break;
@@ -168,16 +157,89 @@ int main(int, char**)
 
 	cudaStreamSynchronize(currentStream->cudaStream);
 	imshow("edges", currentStream->output_frame);
-	
-	sdkStopTimer(&t);
-	global_time += sdkGetTimerValue(&t);
-
 
 	cudaFree(stream1.d_inout_buffer);
 	cudaFree(stream2.d_inout_buffer);
 	cudaFree(stream1.d_buffer);
 	cudaFree(stream2.d_buffer);
-	printf("Average Time per Frame(global): %fms\n", global_time / frameCount);
-	getchar();
+	
 	return 0;
 	}
+
+int basic()
+{
+	VideoCapture cap("..\\Videos\\robotica_1080.mp4");
+
+	if (!cap.isOpened())  // check if we succeeded
+		return -1;
+
+	bool firstFrame = true;
+	void* greyScaleBuffer = nullptr;
+	size_t frameBufferSize = 0;
+
+	namedWindow("edges", 1);
+	for (;;)
+	{
+		Mat frame;
+		cap >> frame; // get a new frame from camera
+
+		if (frame.dims == 0) { // we're done
+			break;
+		}
+
+		if (firstFrame)
+		{
+			frameBufferSize = frame.cols * frame.rows;
+			cudaMalloc(&greyScaleBuffer, frameBufferSize);
+			firstFrame = false;
+		}
+
+		greyScaleCuda(frame, greyScaleBuffer);
+
+
+		Mat output(frame.rows, frame.cols, CV_8UC1);
+		sobelCuda(output, greyScaleBuffer);
+		imshow("edges", output);
+		if (waitKey(1) >= 0) break;
+	}
+
+	cudaFree(greyScaleBuffer);
+	// the camera will be deinitialized automatically in VideoCapture destructor
+	return 0;
+}
+
+int main(int, char**)
+{
+	StopWatchInterface *t;
+	if (!sdkCreateTimer(&t)) {
+		printf("timercreate failed\n");
+		exit(-1);
+	}
+
+	sdkStartTimer(&t);
+	basic();
+	sdkStopTimer(&t);
+	printf("Time(Basic): %fms\n", sdkGetTimerValue(&t));
+	sdkResetTimer(&t);
+
+	sdkStartTimer(&t);
+	do_streams();
+	sdkStopTimer(&t);
+	printf("Time(Stream): %fms\n", sdkGetTimerValue(&t));
+	sdkResetTimer(&t);
+
+	sdkStartTimer(&t);
+	basic();
+	sdkStopTimer(&t);
+	printf("Time(Basic): %fms\n", sdkGetTimerValue(&t));
+	sdkResetTimer(&t);
+
+	sdkStartTimer(&t);
+	do_streams();
+	sdkStopTimer(&t);
+	printf("Time(Stream): %fms\n", sdkGetTimerValue(&t));
+	sdkResetTimer(&t);
+
+	getchar();
+	return 0;
+}
