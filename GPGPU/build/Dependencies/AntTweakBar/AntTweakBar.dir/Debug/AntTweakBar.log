@@ -1,0 +1,32 @@
+﻿  Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/AntTweakBar/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/stach/Documents/GPGPDingo/GPGPU/build/Dependencies/AntTweakBar/CMakeFiles/generate.stamp is up-to-date.
+  TwPrecomp.cpp
+  TwMgr.cpp
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6225): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6226): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6227): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6228): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6229): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6230): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6231): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6232): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6233): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6234): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6235): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6236): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6237): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6239): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6252): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6258): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6267): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+  TwFonts.cpp
+  TwColors.cpp
+  TwBar.cpp
+  TwOpenGL.cpp
+  LoadOGL.cpp
+  TwOpenGLCore.cpp
+  LoadOGLCore.cpp
+  Generating Code...
+  TwEventGLUT.c
+TwPrecomp.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+  AntTweakBar.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\Dependencies\AntTweakBar\Debug\AntTweakBar.lib

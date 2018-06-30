@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC.cmake
+C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt
+C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/3.12.0-rc2/CMakeCCompiler.cmake
+C:/Users/stach/Documents/GPGPDingo/GPGPU/cmake/launcher-templates/targetlauncher.cmd.in
+C:/Users/stach/Documents/GPGPDingo/GPGPU/cmake/launcher-templates/vcxproj.user.in

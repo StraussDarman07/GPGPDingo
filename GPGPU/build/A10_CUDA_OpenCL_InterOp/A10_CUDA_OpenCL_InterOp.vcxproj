@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{72B1F7FA-0795-3DC9-A750-1BA1817C357A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>A10_CUDA_OpenCL_InterOp</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">A10_CUDA_OpenCL_InterOp.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">A10_CUDA_OpenCL_InterOp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">A10_CUDA_OpenCL_InterOp.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">A10_CUDA_OpenCL_InterOp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">A10_CUDA_OpenCL_InterOp.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">A10_CUDA_OpenCL_InterOp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">A10_CUDA_OpenCL_InterOp.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">A10_CUDA_OpenCL_InterOp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(Include)</Include>
+      <Defines>_WINDOWS;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="Debug";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>true</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\Dependencies\freeglut\Debug\freeglut.lib;..\Dependencies\GLTools\Debug\GLTools.lib;..\Dependencies\AntTweakBar\Debug\AntTweakBar.lib;opencv_core340d.lib;opencv_highgui340d.lib;opencv_imgproc340d.lib;opencv_imgcodecs340d.lib;opencv_video340d.lib;opencv_videoio340d.lib;..\Dependencies\glew\Debug\glew.lib;..\Dependencies\freeglut\Debug\freeglut.lib;winmm.lib;opengl32.lib;glu32.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug;C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/Debug/A10_CUDA_OpenCL_InterOp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/Debug/A10_CUDA_OpenCL_InterOp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="Release";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\Dependencies\freeglut\Release\freeglut.lib;..\Dependencies\GLTools\Release\GLTools.lib;..\Dependencies\AntTweakBar\Release\AntTweakBar.lib;opencv_core340d.lib;opencv_highgui340d.lib;opencv_imgproc340d.lib;opencv_imgcodecs340d.lib;opencv_video340d.lib;opencv_videoio340d.lib;..\Dependencies\glew\Release\glew.lib;..\Dependencies\freeglut\Release\freeglut.lib;winmm.lib;opengl32.lib;glu32.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug;C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/Release/A10_CUDA_OpenCL_InterOp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/Release/A10_CUDA_OpenCL_InterOp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="MinSizeRel";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob1"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O1</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\Dependencies\freeglut\MinSizeRel\freeglut.lib;..\Dependencies\GLTools\MinSizeRel\GLTools.lib;..\Dependencies\AntTweakBar\MinSizeRel\AntTweakBar.lib;opencv_core340d.lib;opencv_highgui340d.lib;opencv_imgproc340d.lib;opencv_imgcodecs340d.lib;opencv_video340d.lib;opencv_videoio340d.lib;..\Dependencies\glew\MinSizeRel\glew.lib;..\Dependencies\freeglut\MinSizeRel\freeglut.lib;winmm.lib;opengl32.lib;glu32.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug;C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/MinSizeRel/A10_CUDA_OpenCL_InterOp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/MinSizeRel/A10_CUDA_OpenCL_InterOp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;FREEIMAGE_LIB;TW_STATIC;_CRT_SECURE_NO_WARNINGS;FREEGLUT_LIB_PRAGMAS=0;FREEGLUT_STATIC;TW_NO_LIB_PRAGMA;CMAKE_INTDIR="RelWithDebInfo";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob1"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\FreeImage\Source;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\freeglut\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\AntTweakBar\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\glew\include;C:\Users\stach\Documents\GPGPDingo\GPGPU;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\OpenCV\include;C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\CUDASamples\common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\Dependencies\freeglut\RelWithDebInfo\freeglut.lib;..\Dependencies\GLTools\RelWithDebInfo\GLTools.lib;..\Dependencies\AntTweakBar\RelWithDebInfo\AntTweakBar.lib;opencv_core340d.lib;opencv_highgui340d.lib;opencv_imgproc340d.lib;opencv_imgcodecs340d.lib;opencv_video340d.lib;opencv_videoio340d.lib;..\Dependencies\glew\RelWithDebInfo\glew.lib;..\Dependencies\freeglut\RelWithDebInfo\freeglut.lib;winmm.lib;opengl32.lib;glu32.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug;C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/OpenCV/lib/Debug/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/RelWithDebInfo/A10_CUDA_OpenCL_InterOp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/RelWithDebInfo/A10_CUDA_OpenCL_InterOp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/stach/Documents/GPGPDingo/GPGPU -BC:/Users/stach/Documents/GPGPDingo/GPGPU/build --check-stamp-file C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CMakeCCompiler.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\targetlauncher.cmd.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\vcxproj.user.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/stach/Documents/GPGPDingo/GPGPU -BC:/Users/stach/Documents/GPGPDingo/GPGPU/build --check-stamp-file C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CMakeCCompiler.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\targetlauncher.cmd.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\vcxproj.user.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/stach/Documents/GPGPDingo/GPGPU -BC:/Users/stach/Documents/GPGPDingo/GPGPU/build --check-stamp-file C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CMakeCCompiler.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\targetlauncher.cmd.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\vcxproj.user.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/stach/Documents/GPGPDingo/GPGPU -BC:/Users/stach/Documents/GPGPDingo/GPGPU/build --check-stamp-file C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/stach/Documents/GPGPDingo/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CMakeCCompiler.cmake;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\targetlauncher.cmd.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\cmake\launcher-templates\vcxproj.user.in;C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\A10_CUDA_OpenCL_InterOp\main.cpp" />
+    <CudaCompile Include="..\..\A10_CUDA_OpenCL_InterOp\cudaOpenCV.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\build\ZERO_CHECK.vcxproj">
+      <Project>{6A2FDE18-3D17-3211-8B90-5BFA0436210F}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\build\Dependencies\AntTweakBar\AntTweakBar.vcxproj">
+      <Project>{E3610355-22E7-368B-928D-DBCCBD1E9DC1}</Project>
+      <Name>AntTweakBar</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\build\Dependencies\GLTools\GLTools.vcxproj">
+      <Project>{968158B9-0BBF-312B-894B-0788A485840D}</Project>
+      <Name>GLTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\build\Dependencies\freeglut\freeglut.vcxproj">
+      <Project>{5BAB4760-6266-3EBB-A151-544F26FCA855}</Project>
+      <Name>freeglut</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\build\Dependencies\glew\glew.vcxproj">
+      <Project>{61CACA93-C2BD-30AA-841C-363F2D793D20}</Project>
+      <Name>glew</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.targets" />
+  </ImportGroup>
+</Project>

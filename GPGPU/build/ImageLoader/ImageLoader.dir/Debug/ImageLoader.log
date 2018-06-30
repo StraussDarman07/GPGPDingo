@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/ImageLoader/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/stach/Documents/GPGPDingo/GPGPU/build/ImageLoader/CMakeFiles/generate.stamp is up-to-date.
+  ImageLoader.cpp
+  ImageLoader.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\ImageLoader\Debug\ImageLoader.lib

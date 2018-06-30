@@ -1,0 +1,25 @@
+﻿  Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/GLTools/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/stach/Documents/GPGPDingo/GPGPU/build/Dependencies/GLTools/CMakeFiles/generate.stamp is up-to-date.
+  GLBatch.cpp
+  GLShaderManager.cpp
+  GLTools.cpp
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(395): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(396): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(407): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(408): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(419): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(420): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(432): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(433): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(528): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(529): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(541): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(542): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(559): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(560): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(572): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\stach\Documents\GPGPDingo\GPGPU\Dependencies\GLTools\src\GLTools.cpp(573): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  GLTriangleBatch.cpp
+  math3d.cpp
+  Generating Code...
+  GLTools.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\Dependencies\GLTools\Debug\GLTools.lib

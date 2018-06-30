@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\19c1af8d8a11add579d6101d12858ec5\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{57CDAB6C-3836-3E5A-A9A7-6050B5FB51BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

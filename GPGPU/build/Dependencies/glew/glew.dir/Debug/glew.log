@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/stach/Documents/GPGPDingo/GPGPU/Dependencies/glew/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/stach/Documents/GPGPDingo/GPGPU/build/Dependencies/glew/CMakeFiles/generate.stamp is up-to-date.
+  glew.c
+  glew.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\Dependencies\glew\Debug\glew.lib

@@ -1,0 +1,1128 @@
+The system is: Windows - 6.1.7601 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:14 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCXX\CompilerIdCXX.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "Debug\" wird erstellt.
+  Das Verzeichnis "Debug\CompilerIdCXX.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  Die Datei "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" wird gel�scht.
+  Aktualisieren des Timestamps von "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCXX\CompilerIdCXX.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgef�hrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:01.27
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/3.10.2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  -v;--keep;--keep-dir;tmp
+
+The output was:
+0
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:16 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "Debug\" wird erstellt.
+  Das Verzeichnis "Debug\CompilerIdCUDA.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "Debug\CompilerIdCUDA.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+AddCudaCompileDeps:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CMakeCUDACompilerId.cu 
+Das Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (1) erstellt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (1:2) auf Knoten "1", CudaBuildCore Ziel(e).
+CudaBuildCore:
+  Compiling CUDA source file CMakeCUDACompilerId.cu...
+  cmd.exe /C "C:\Users\hm-stachl\AppData\Local\Temp\tmpc6f2bf0469744aa2883e1f46b2a1a8d8.cmd"
+  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -o Debug\CMakeCUDACompilerId.cu.obj "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CMakeCUDACompilerId.cu"
+  
+  H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -o Debug\CMakeCUDACompilerId.cu.obj "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CMakeCUDACompilerId.cu" 
+  CMakeCUDACompilerId.cu
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" ist abgeschlossen (CudaBuildCore Ziel(e)).
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudart.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCUDA.lib" /MACHINE:X64 Debug\CMakeCUDACompilerId.cu.obj
+  CompilerIdCUDA.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\.\CompilerIdCUDA.exe
+PostBuildEvent:
+  echo CMAKE_CUDA_COMPILER=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe
+  :VCEnd
+  CMAKE_CUDA_COMPILER=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe
+FinalizeBuildStatus:
+  Die Datei "Debug\CompilerIdCUDA.tlog\unsuccessfulbuild" wird gel�scht.
+  Aktualisieren des Timestamps von "Debug\CompilerIdCUDA.tlog\CompilerIdCUDA.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgef�hrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:03.20
+
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exe"
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.vcxproj"
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "vc140.pdb"
+
+The CUDA compiler identification is NVIDIA, found in "H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/3.10.2/CompilerIdCUDA/CompilerIdCUDA.exe"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_ee41a.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:20 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_ee41a.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_ee41a.dir\Debug\" wird erstellt.
+  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_ee41a.dir\Debug\cmTC_ee41a.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_ee41a.dir\Debug\cmTC_ee41a.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ee41a.dir\Debug\\" /Fd"cmTC_ee41a.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ee41a.dir\Debug\\" /Fd"cmTC_ee41a.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_ee41a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_ee41a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_ee41a.lib" /MACHINE:X64  /machine:x64 cmTC_ee41a.dir\Debug\testCXXCompiler.obj
+  cmTC_ee41a.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_ee41a.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_ee41a.dir\Debug\cmTC_ee41a.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_ee41a.dir\Debug\cmTC_ee41a.tlog\cmTC_ee41a.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_ee41a.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:01.01
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_638fe.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:22 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_638fe.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_638fe.dir\Debug\" wird erstellt.
+  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_638fe.dir\Debug\cmTC_638fe.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_638fe.dir\Debug\cmTC_638fe.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_638fe.dir\Debug\\" /Fd"cmTC_638fe.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_638fe.dir\Debug\\" /Fd"cmTC_638fe.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_638fe.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_638fe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_638fe.lib" /MACHINE:X64  /machine:x64 cmTC_638fe.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_638fe.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_638fe.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_638fe.dir\Debug\cmTC_638fe.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_638fe.dir\Debug\cmTC_638fe.tlog\cmTC_638fe.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_638fe.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:01.76
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_739ff.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:25 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_739ff.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_739ff.dir\Debug\" wird erstellt.
+  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_739ff.dir\Debug\cmTC_739ff.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_739ff.dir\Debug\cmTC_739ff.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_739ff.dir\Debug\\" /Fd"cmTC_739ff.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\feature_tests.cxx
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_739ff.dir\Debug\\" /Fd"cmTC_739ff.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\feature_tests.cxx
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_739ff.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_739ff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_739ff.lib" /MACHINE:X64  /machine:x64 cmTC_739ff.dir\Debug\feature_tests.obj
+  cmTC_739ff.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_739ff.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_739ff.dir\Debug\cmTC_739ff.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_739ff.dir\Debug\cmTC_739ff.tlog\cmTC_739ff.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_739ff.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:00.99
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+Determining if the CUDA compiler works passed with the following output:
+Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_3995f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:28 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_3995f.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_3995f.dir\Debug\" wird erstellt.
+  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_3995f.dir\Debug\cmTC_3995f.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_3995f.dir\Debug\cmTC_3995f.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+AddCudaCompileDeps:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_WINDOWS /DCMAKE_INTDIR="Debug" /DCMAKE_INTDIR="Debug" /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\main.cu 
+Das Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_3995f.vcxproj" (1) erstellt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_3995f.vcxproj" (1:2) auf Knoten "1", CudaBuildCore Ziel(e).
+CudaBuildCore:
+  Compiling CUDA source file main.cu...
+  cmd.exe /C "C:\Users\hm-stachl\AppData\Local\Temp\tmp0be4e6bbd0c348f385b43dbbe727fda5.cmd"
+  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_3995f.dir\Debug\main.cu.obj "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\main.cu"
+  
+  H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_3995f.dir\Debug\main.cu.obj "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\main.cu" 
+  main.cu
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_3995f.vcxproj" ist abgeschlossen (CudaBuildCore Ziel(e)).
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_3995f.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_3995f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_3995f.lib" /MACHINE:X64 cmTC_3995f.dir\Debug\main.cu.obj
+     Creating library H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_3995f.lib and object H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_3995f.exp
+  cmTC_3995f.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_3995f.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_3995f.dir\Debug\cmTC_3995f.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_3995f.dir\Debug\cmTC_3995f.tlog\cmTC_3995f.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_3995f.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:03.68
+
+
+Detecting CUDA compiler ABI info compiled with the following output:
+Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_cf32e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:33 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_cf32e.dir\Debug\" wird erstellt.
+  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+AddCudaCompileDeps:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_WINDOWS /DCMAKE_INTDIR="Debug" /DCMAKE_INTDIR="Debug" /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu" 
+Das Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" (1) erstellt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" (1:2) auf Knoten "1", CudaBuildCore Ziel(e).
+CudaBuildCore:
+  Compiling CUDA source file C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu...
+  cmd.exe /C "C:\Users\hm-stachl\AppData\Local\Temp\tmp6e78173e83594212b05354f2b06f499c.cmd"
+  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_cf32e.dir\Debug\CMakeCUDACompilerABI.cu.obj "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu"
+  
+  H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_cf32e.dir\Debug\CMakeCUDACompilerABI.cu.obj "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu" 
+  CMakeCUDACompilerABI.cu
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" ist abgeschlossen (CudaBuildCore Ziel(e)).
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_cf32e.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.lib" /MACHINE:X64  -v cmTC_cf32e.dir\Debug\CMakeCUDACompilerABI.cu.obj
+LINK : warning LNK4044: unrecognized option '/v'; ignored [H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj]
+     Creating library H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.lib and object H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.exp
+  cmTC_cf32e.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_cf32e.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\cmTC_cf32e.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+
+"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" (Standardziel) (1) ->
+(Link Ziel) -> 
+  LINK : warning LNK4044: unrecognized option '/v'; ignored [H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj]
+
+    1 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:03.85
+
+
+Parsed CUDA implicit link information from above output:
+  link line regex: [^( *|.*[/\])(link\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_cf32e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"]
+  ignore line: [Microsoft (R)-Buildmodul, Version 14.0.23107.0]
+  ignore line: [Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.]
+  ignore line: []
+  ignore line: [Der Buildvorgang wurde am 25.06.2018 16:19:33 gestartet.]
+  ignore line: [Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" auf Knoten "1" (Standardziele).]
+  ignore line: [PrepareForBuild:]
+  ignore line: [  Das Verzeichnis "cmTC_cf32e.dir\Debug\" wird erstellt.]
+  ignore line: [  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.]
+  ignore line: [  Das Verzeichnis "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\" wird erstellt.]
+  ignore line: [InitializeBuildStatus:]
+  ignore line: [  "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.]
+  ignore line: [AddCudaCompileDeps:]
+  ignore line: [  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_WINDOWS /DCMAKE_INTDIR="Debug" /DCMAKE_INTDIR="Debug" /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu" ]
+  ignore line: [Das Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" (1) erstellt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" (1:2) auf Knoten "1", CudaBuildCore Ziel(e).]
+  ignore line: [CudaBuildCore:]
+  ignore line: [  Compiling CUDA source file C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu...]
+  ignore line: [  cmd.exe /C "C:\Users\hm-stachl\AppData\Local\Temp\tmp6e78173e83594212b05354f2b06f499c.cmd"]
+  ignore line: [  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_cf32e.dir\Debug\CMakeCUDACompilerABI.cu.obj "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu"]
+  ignore line: [  ]
+  ignore line: [  H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_cf32e.dir\Debug\CMakeCUDACompilerABI.cu.obj "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCUDACompilerABI.cu" ]
+  ignore line: [  CMakeCUDACompilerABI.cu]
+  ignore line: [Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" ist abgeschlossen (CudaBuildCore Ziel(e)).]
+  ignore line: [Link:]
+  ignore line: [  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_cf32e.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.lib" /MACHINE:X64  -v cmTC_cf32e.dir\Debug\CMakeCUDACompilerABI.cu.obj]
+  ignore line: [LINK : warning LNK4044: unrecognized option '/v']
+  ignore line: [ ignored [H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj]]
+  ignore line: [     Creating library H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.lib and object H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_cf32e.exp]
+  ignore line: [  cmTC_cf32e.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_cf32e.exe]
+  ignore line: [FinalizeBuildStatus:]
+  ignore line: [  Die Datei "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\unsuccessfulbuild" wird gel”scht.]
+  ignore line: [  Aktualisieren des Timestamps von "cmTC_cf32e.dir\Debug\cmTC_cf32e.tlog\cmTC_cf32e.lastbuildstate".]
+  ignore line: [Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" ist abgeschlossen (Standardziele).]
+  ignore line: []
+  ignore line: [Der Buildvorgang wurde erfolgreich ausgefhrt.]
+  ignore line: []
+  ignore line: ["H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj" (Standardziel) (1) ->]
+  ignore line: [(Link Ziel) -> ]
+  ignore line: [  LINK : warning LNK4044: unrecognized option '/v']
+  ignore line: [ ignored [H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_cf32e.vcxproj]]
+  ignore line: []
+  ignore line: [    1 Warnung(en)]
+  ignore line: [    0 Fehler]
+  ignore line: []
+  ignore line: [Verstrichene Zeit 00:00:03.85]
+  ignore line: []
+  implicit libs: []
+  implicit dirs: []
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:38 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdC\CompilerIdC.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "Debug\" wird erstellt.
+  Das Verzeichnis "Debug\CompilerIdC.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "Debug\CompilerIdC.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  Die Datei "Debug\CompilerIdC.tlog\unsuccessfulbuild" wird gel�scht.
+  Aktualisieren des Timestamps von "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\3.10.2\CompilerIdC\CompilerIdC.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgef�hrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:00.92
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/3.10.2/CompilerIdC/CompilerIdC.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_a3ae1.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:39 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_a3ae1.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_a3ae1.dir\Debug\" wird erstellt.
+  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_a3ae1.dir\Debug\cmTC_a3ae1.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_a3ae1.dir\Debug\cmTC_a3ae1.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a3ae1.dir\Debug\\" /Fd"cmTC_a3ae1.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a3ae1.dir\Debug\\" /Fd"cmTC_a3ae1.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_a3ae1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_a3ae1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_a3ae1.lib" /MACHINE:X64  /machine:x64 cmTC_a3ae1.dir\Debug\testCCompiler.obj
+  cmTC_a3ae1.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_a3ae1.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_a3ae1.dir\Debug\cmTC_a3ae1.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_a3ae1.dir\Debug\cmTC_a3ae1.tlog\cmTC_a3ae1.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_a3ae1.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:00.99
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_55079.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R)-Buildmodul, Version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Der Buildvorgang wurde am 25.06.2018 16:19:41 gestartet.
+Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_55079.vcxproj" auf Knoten "1" (Standardziele).
+PrepareForBuild:
+  Das Verzeichnis "cmTC_55079.dir\Debug\" wird erstellt.
+  Das Verzeichnis "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+  Das Verzeichnis "cmTC_55079.dir\Debug\cmTC_55079.tlog\" wird erstellt.
+InitializeBuildStatus:
+  "cmTC_55079.dir\Debug\cmTC_55079.tlog\unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_55079.dir\Debug\\" /Fd"cmTC_55079.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_55079.dir\Debug\\" /Fd"cmTC_55079.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_55079.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_55079.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/Benutzer/Dokumente/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_55079.lib" /MACHINE:X64  /machine:x64 cmTC_55079.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_55079.vcxproj -> H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_55079.exe
+FinalizeBuildStatus:
+  Die Datei "cmTC_55079.dir\Debug\cmTC_55079.tlog\unsuccessfulbuild" wird gel”scht.
+  Aktualisieren des Timestamps von "cmTC_55079.dir\Debug\cmTC_55079.tlog\cmTC_55079.lastbuildstate".
+Die Erstellung von Projekt "H:\Benutzer\Dokumente\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_55079.vcxproj" ist abgeschlossen (Standardziele).
+
+Der Buildvorgang wurde erfolgreich ausgefhrt.
+    0 Warnung(en)
+    0 Fehler
+
+Verstrichene Zeit 00:00:01.00
+
+
+The system is: Windows - 10.0.17134 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: /DWIN32;/D_WINDOWS;/W3;/GR;/EHsc
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:12.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.77
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/3.12.0-rc2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+Compiler:  
+Build flags: -D_WINDOWS;-Xcompiler="/W3;/GR;/EHsc"
+Id flags:  -v;--keep;--keep-dir;tmp
+
+The output was:
+0
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:13.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdCUDA.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdCUDA.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+AddCudaCompileDeps:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CMakeCUDACompilerId.cu 
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (1) is building "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (1:2) on node 1 (CudaBuildCore target(s)).
+CudaBuildCore:
+  Compiling CUDA source file CMakeCUDACompilerId.cu...
+  cmd.exe /C "C:\Users\stach\AppData\Local\Temp\tmp6eb5577112884c10a58d19d427ee2979.cmd"
+  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -o Debug\CMakeCUDACompilerId.cu.obj "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CMakeCUDACompilerId.cu"
+  
+  C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -o Debug\CMakeCUDACompilerId.cu.obj "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CMakeCUDACompilerId.cu" 
+  CMakeCUDACompilerId.cu
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (CudaBuildCore target(s)).
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudart.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCUDA.lib" /MACHINE:X64 Debug\CMakeCUDACompilerId.cu.obj
+  CompilerIdCUDA.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\.\CompilerIdCUDA.exe
+PostBuildEvent:
+  echo CMAKE_CUDA_COMPILER=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe
+  :VCEnd
+  CMAKE_CUDA_COMPILER=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdCUDA.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdCUDA.tlog\CompilerIdCUDA.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.07
+
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exe"
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.vcxproj"
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "vc140.pdb"
+
+The CUDA compiler identification is NVIDIA, found in "C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/3.12.0-rc2/CompilerIdCUDA/CompilerIdCUDA.exe"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_fadf3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:16.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_fadf3.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_fadf3.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_fadf3.dir\Debug\cmTC_fadf3.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_fadf3.dir\Debug\cmTC_fadf3.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fadf3.dir\Debug\\" /Fd"cmTC_fadf3.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24234.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fadf3.dir\Debug\\" /Fd"cmTC_fadf3.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  testCXXCompiler.cxx
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_fadf3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_fadf3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_fadf3.lib" /MACHINE:X64  /machine:x64 cmTC_fadf3.dir\Debug\testCXXCompiler.obj
+  cmTC_fadf3.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_fadf3.exe
+  cmTC_fadf3.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_fadf3.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_fadf3.dir\Debug\cmTC_fadf3.tlog\unsuccessfulbuild".
+  Touching "cmTC_fadf3.dir\Debug\cmTC_fadf3.tlog\cmTC_fadf3.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_fadf3.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.58
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_a633d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:17.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_a633d.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_a633d.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_a633d.dir\Debug\cmTC_a633d.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_a633d.dir\Debug\cmTC_a633d.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a633d.dir\Debug\\" /Fd"cmTC_a633d.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24234.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a633d.dir\Debug\\" /Fd"cmTC_a633d.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
+  CMakeCXXCompilerABI.cpp
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_a633d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_a633d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_a633d.lib" /MACHINE:X64  /machine:x64 cmTC_a633d.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_a633d.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_a633d.exe
+  cmTC_a633d.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_a633d.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_a633d.dir\Debug\cmTC_a633d.tlog\unsuccessfulbuild".
+  Touching "cmTC_a633d.dir\Debug\cmTC_a633d.tlog\cmTC_a633d.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_a633d.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.59
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_d6e0e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:18.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_d6e0e.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_d6e0e.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_d6e0e.dir\Debug\cmTC_d6e0e.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_d6e0e.dir\Debug\cmTC_d6e0e.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d6e0e.dir\Debug\\" /Fd"cmTC_d6e0e.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\feature_tests.cxx
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24234.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d6e0e.dir\Debug\\" /Fd"cmTC_d6e0e.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\feature_tests.cxx
+  feature_tests.cxx
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_d6e0e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_d6e0e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_d6e0e.lib" /MACHINE:X64  /machine:x64 cmTC_d6e0e.dir\Debug\feature_tests.obj
+  cmTC_d6e0e.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_d6e0e.exe
+  cmTC_d6e0e.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_d6e0e.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_d6e0e.dir\Debug\cmTC_d6e0e.tlog\unsuccessfulbuild".
+  Touching "cmTC_d6e0e.dir\Debug\cmTC_d6e0e.tlog\cmTC_d6e0e.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_d6e0e.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.52
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+Determining if the CUDA compiler works passed with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_45e8d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:19.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_45e8d.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_45e8d.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_45e8d.dir\Debug\cmTC_45e8d.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_45e8d.dir\Debug\cmTC_45e8d.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+AddCudaCompileDeps:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_WINDOWS /DCMAKE_INTDIR="Debug" /DCMAKE_INTDIR="Debug" /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\main.cu 
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_45e8d.vcxproj" (1) is building "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_45e8d.vcxproj" (1:2) on node 1 (CudaBuildCore target(s)).
+CudaBuildCore:
+  Compiling CUDA source file main.cu...
+  cmd.exe /C "C:\Users\stach\AppData\Local\Temp\tmpc9cb2a447be04d3fa0d8103345c17297.cmd"
+  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_45e8d.dir\Debug\main.obj "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\main.cu"
+  
+  C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_45e8d.dir\Debug\main.obj "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\main.cu" 
+  main.cu
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_45e8d.vcxproj" (CudaBuildCore target(s)).
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_45e8d.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudadevrt.lib cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_45e8d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_45e8d.lib" /MACHINE:X64 cmTC_45e8d.dir\Debug\main.obj
+     Creating library C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_45e8d.lib and object C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_45e8d.exp
+  cmTC_45e8d.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_45e8d.exe
+  cmTC_45e8d.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_45e8d.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_45e8d.dir\Debug\cmTC_45e8d.tlog\unsuccessfulbuild".
+  Touching "cmTC_45e8d.dir\Debug\cmTC_45e8d.tlog\cmTC_45e8d.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_45e8d.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.88
+
+
+Detecting CUDA compiler ABI info compiled with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_670f3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:21.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_670f3.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+AddCudaCompileDeps:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_WINDOWS /DCMAKE_INTDIR="Debug" /DCMAKE_INTDIR="Debug" /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu" 
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (1) is building "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (1:2) on node 1 (CudaBuildCore target(s)).
+CudaBuildCore:
+  Compiling CUDA source file ..\..\..\..\..\..\..\..\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu...
+  cmd.exe /C "C:\Users\stach\AppData\Local\Temp\tmpd71a3312f1e0488c874e281075cf2e39.cmd"
+  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_670f3.dir\Debug\CMakeCUDACompilerABI.obj "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu"
+  
+  C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_670f3.dir\Debug\CMakeCUDACompilerABI.obj "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu" 
+  CMakeCUDACompilerABI.cu
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (CudaBuildCore target(s)).
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_670f3.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudadevrt.lib cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.lib" /MACHINE:X64  -v cmTC_670f3.dir\Debug\CMakeCUDACompilerABI.obj
+LINK : warning LNK4044: unrecognized option '/v'; ignored [C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj]
+     Creating library C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.lib and object C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.exp
+  cmTC_670f3.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_670f3.exe
+  cmTC_670f3.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\unsuccessfulbuild".
+  Touching "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\cmTC_670f3.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (default target) (1) ->
+(Link target) -> 
+  LINK : warning LNK4044: unrecognized option '/v'; ignored [C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.79
+
+
+Parsed CUDA implicit link information from above output:
+  link line regex: [^( *|.*[/\])(link\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"MSBuild.exe" "cmTC_670f3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"]
+  ignore line: [Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework]
+  ignore line: [Copyright (C) Microsoft Corporation. All rights reserved.]
+  ignore line: []
+  ignore line: [Build started 30-Jun-18 15:23:21.]
+  ignore line: [Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" on node 1 (default targets).]
+  ignore line: [PrepareForBuild:]
+  ignore line: [  Creating directory "cmTC_670f3.dir\Debug\".]
+  ignore line: [  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".]
+  ignore line: [  Creating directory "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\".]
+  ignore line: [InitializeBuildStatus:]
+  ignore line: [  Creating "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.]
+  ignore line: [AddCudaCompileDeps:]
+  ignore line: [  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_WINDOWS /DCMAKE_INTDIR="Debug" /DCMAKE_INTDIR="Debug" /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /I. /FIcuda_runtime.h /c "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu" ]
+  ignore line: [Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (1) is building "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (1:2) on node 1 (CudaBuildCore target(s)).]
+  ignore line: [CudaBuildCore:]
+  ignore line: [  Compiling CUDA source file ..\..\..\..\..\..\..\..\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu...]
+  ignore line: [  cmd.exe /C "C:\Users\stach\AppData\Local\Temp\tmpd71a3312f1e0488c874e281075cf2e39.cmd"]
+  ignore line: [  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_670f3.dir\Debug\CMakeCUDACompilerABI.obj "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu"]
+  ignore line: [  ]
+  ignore line: [  C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -o cmTC_670f3.dir\Debug\CMakeCUDACompilerABI.obj "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCUDACompilerABI.cu" ]
+  ignore line: [  CMakeCUDACompilerABI.cu]
+  ignore line: [Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (CudaBuildCore target(s)).]
+  ignore line: [Link:]
+  ignore line: [  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_670f3.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64" cudadevrt.lib cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.lib" /MACHINE:X64  -v cmTC_670f3.dir\Debug\CMakeCUDACompilerABI.obj]
+  ignore line: [LINK : warning LNK4044: unrecognized option '/v']
+  ignore line: [ ignored [C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj]]
+  ignore line: [     Creating library C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.lib and object C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.exp]
+  ignore line: [  cmTC_670f3.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_670f3.exe]
+  ignore line: [  cmTC_670f3.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_670f3.pdb (Full PDB)]
+  ignore line: [FinalizeBuildStatus:]
+  ignore line: [  Deleting file "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\unsuccessfulbuild".]
+  ignore line: [  Touching "cmTC_670f3.dir\Debug\cmTC_670f3.tlog\cmTC_670f3.lastbuildstate".]
+  ignore line: [Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (default targets).]
+  ignore line: []
+  ignore line: [Build succeeded.]
+  ignore line: []
+  ignore line: ["C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj" (default target) (1) ->]
+  ignore line: [(Link target) -> ]
+  ignore line: [  LINK : warning LNK4044: unrecognized option '/v']
+  ignore line: [ ignored [C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_670f3.vcxproj]]
+  ignore line: []
+  ignore line: [    1 Warning(s)]
+  ignore line: [    0 Error(s)]
+  ignore line: []
+  ignore line: [Time Elapsed 00:00:01.79]
+  ignore line: []
+  implicit libs: []
+  implicit dirs: []
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: /DWIN32;/D_WINDOWS;/W3
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:23.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\3.12.0-rc2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.54
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/3.12.0-rc2/CompilerIdC/CompilerIdC.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_94fff.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:23.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_94fff.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_94fff.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_94fff.dir\Debug\cmTC_94fff.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_94fff.dir\Debug\cmTC_94fff.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_94fff.dir\Debug\\" /Fd"cmTC_94fff.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24234.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_94fff.dir\Debug\\" /Fd"cmTC_94fff.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  testCCompiler.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_94fff.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_94fff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_94fff.lib" /MACHINE:X64  /machine:x64 cmTC_94fff.dir\Debug\testCCompiler.obj
+  cmTC_94fff.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_94fff.exe
+  cmTC_94fff.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_94fff.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_94fff.dir\Debug\cmTC_94fff.tlog\unsuccessfulbuild".
+  Touching "cmTC_94fff.dir\Debug\cmTC_94fff.tlog\cmTC_94fff.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_94fff.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.52
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_448f2.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:24.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_448f2.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_448f2.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_448f2.dir\Debug\cmTC_448f2.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_448f2.dir\Debug\cmTC_448f2.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_448f2.dir\Debug\\" /Fd"cmTC_448f2.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24234.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_448f2.dir\Debug\\" /Fd"cmTC_448f2.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
+  CMakeCCompilerABI.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_448f2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_448f2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_448f2.lib" /MACHINE:X64  /machine:x64 cmTC_448f2.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_448f2.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_448f2.exe
+  cmTC_448f2.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_448f2.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_448f2.dir\Debug\cmTC_448f2.tlog\unsuccessfulbuild".
+  Touching "cmTC_448f2.dir\Debug\cmTC_448f2.tlog\cmTC_448f2.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_448f2.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.55
+
+
+
+
+Detecting C [] compiler features compiled with the following output:
+Change Dir: C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"MSBuild.exe" "cmTC_0a939.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 15.7.177.53362 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 30-Jun-18 15:23:25.
+Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_0a939.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_0a939.dir\Debug\".
+  Creating directory "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_0a939.dir\Debug\cmTC_0a939.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_0a939.dir\Debug\cmTC_0a939.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0a939.dir\Debug\\" /Fd"cmTC_0a939.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\feature_tests.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24234.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0a939.dir\Debug\\" /Fd"cmTC_0a939.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\feature_tests.c
+  feature_tests.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_0a939.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_0a939.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_0a939.lib" /MACHINE:X64  /machine:x64 cmTC_0a939.dir\Debug\feature_tests.obj
+  cmTC_0a939.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\Debug\cmTC_0a939.exe
+  cmTC_0a939.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/CMakeFiles/CMakeTmp/Debug/cmTC_0a939.pdb (Full PDB)
+FinalizeBuildStatus:
+  Deleting file "cmTC_0a939.dir\Debug\cmTC_0a939.tlog\unsuccessfulbuild".
+  Touching "cmTC_0a939.dir\Debug\cmTC_0a939.tlog\cmTC_0a939.lastbuildstate".
+Done Building Project "C:\Users\stach\Documents\GPGPDingo\GPGPU\build\CMakeFiles\CMakeTmp\cmTC_0a939.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.61
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_variadic_macros

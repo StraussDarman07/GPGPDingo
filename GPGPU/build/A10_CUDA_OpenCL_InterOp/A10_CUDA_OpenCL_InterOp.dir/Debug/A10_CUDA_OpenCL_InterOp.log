@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (A10_CUDA_OpenCL_InterOp.dir\Debug\) contains files shared from another project (A10_CUDA_OpenCL_InterOp.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     Creating library C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/Debug/A10_CUDA_OpenCL_InterOp.lib and object C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/Debug/A10_CUDA_OpenCL_InterOp.exp
+  A10_CUDA_OpenCL_InterOp.vcxproj -> C:\Users\stach\Documents\GPGPDingo\GPGPU\build\A10_CUDA_OpenCL_InterOp\Debug\A10_CUDA_OpenCL_InterOp.exe
+  A10_CUDA_OpenCL_InterOp.vcxproj -> C:/Users/stach/Documents/GPGPDingo/GPGPU/build/A10_CUDA_OpenCL_InterOp/Debug/A10_CUDA_OpenCL_InterOp.pdb (Full PDB)

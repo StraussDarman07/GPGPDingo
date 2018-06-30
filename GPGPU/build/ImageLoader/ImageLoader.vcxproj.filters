@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\ImageLoader\ImageLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\ImageLoader\ImageLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\stach\Documents\GPGPDingo\GPGPU\ImageLoader\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{18B766C0-3203-3980-B2B8-CB9270583E39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EFDB49F4-B9EB-3BC8-87A9-7C456DDC6C34}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
